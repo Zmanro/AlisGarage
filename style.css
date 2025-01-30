@@ -150,6 +150,29 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    padding: 20px;
+}
+
+/* Adjust for Tablets (max 768px width) */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+/* Adjust for Mobile Phones (max 480px width) */
+@media (max-width: 480px) {
+    .features-grid {
+        grid-template-columns: repeat(1, 1fr); /* Stack features */
+    }
+    
+    .feature {
+        padding: 15px;
+    }
+
+    .feature i {
+        font-size: 3rem; /* Slightly smaller icons */
+    }
 }
 
 .feature {
