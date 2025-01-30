@@ -154,14 +154,14 @@ nav ul li a:hover {
 }
 
 /* Adjust for Tablets (max 768px width) */
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
     }
 }
 
 /* Adjust for Mobile Phones (max 480px width) */
-@media (max-width: 480px) {
+@media (max-width: 1080px) {
     .features-grid {
         grid-template-columns: repeat(1, 1fr); /* Stack features */
     }
