@@ -139,18 +139,18 @@ nav ul li a:hover {
 
 /* Features Section */
 #features {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background-color: white;
     text-align: center;
-    padding: 0 20px 20px 20px;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
     gap: 20px;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
+    max-width: 100%; /* Prevents overflow */
 }
 
 /* Adjust for Tablets (max 768px width) */
@@ -163,35 +163,37 @@ nav ul li a:hover {
 /* Adjust for Mobile Phones (max-width: 600px) */
 @media (max-width: 600px) {
     .features-grid {
-        grid-template-columns: repeat(1, 1fr); /* 1 column (stacked features) */
-        gap: 15px; /* Reduce space between items */
+        grid-template-columns: repeat(1, 1fr); /* 1 column (stacked cards) */
+        gap: 15px;
     }
 
     .feature {
-        padding: 15px;
-        text-align: center; /* Ensure text is centered */
+        width: 90%; /* Ensures cards fit within the screen */
+        max-width: 350px;
     }
 
     .feature i {
-        font-size: 2.5rem; /* Adjust icon size for small screens */
+        font-size: 2.5rem; /* Adjust icon size */
         margin-bottom: 10px;
     }
 
     .feature h3 {
-        font-size: 1.3rem; /* Slightly reduce heading size */
+        font-size: 1.3rem;
     }
 
     .feature p {
-        font-size: 1rem; /* Ensure text is readable */
+        font-size: 1rem;
     }
 }
 
 .feature {
-    text-align: center;
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%; /* Make cards fit within screen */
+    max-width: 350px; /* Prevents cards from being too large */
 }
 
 /* Ensure your icons are big enough */
