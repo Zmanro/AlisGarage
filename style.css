@@ -154,24 +154,35 @@ nav ul li a:hover {
 }
 
 /* Adjust for Tablets (max 768px width) */
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
     }
 }
 
-/* Adjust for Mobile Phones (max 480px width) */
-@media (max-width: 1080px) {
+/* Adjust for Mobile Phones (max-width: 600px) */
+@media (max-width: 600px) {
     .features-grid {
-        grid-template-columns: repeat(1, 1fr); /* Stack features */
+        grid-template-columns: repeat(1, 1fr); /* 1 column (stacked features) */
+        gap: 15px; /* Reduce space between items */
     }
-    
+
     .feature {
         padding: 15px;
+        text-align: center; /* Ensure text is centered */
     }
 
     .feature i {
-        font-size: 3rem; /* Slightly smaller icons */
+        font-size: 2.5rem; /* Adjust icon size for small screens */
+        margin-bottom: 10px;
+    }
+
+    .feature h3 {
+        font-size: 1.3rem; /* Slightly reduce heading size */
+    }
+
+    .feature p {
+        font-size: 1rem; /* Ensure text is readable */
     }
 }
 
